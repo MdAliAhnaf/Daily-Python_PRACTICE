@@ -89,6 +89,20 @@ def is_leap(year):
 year = int(input().strip())
 print(is_leap(year))
 
+#function practice
+def cube(num): 
+    return (num*num*num)
+
+x = cube(3)
+
+y = int(input("Input the number to be added with 27: "))
+
+def add():
+    z = x + y
+    return (z)   
+    
+print(add())
+
 #python function hacker-rank 123...n
 
 # By default Python‘s print() function ends with a newline
