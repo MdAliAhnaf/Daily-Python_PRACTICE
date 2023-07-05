@@ -1,5 +1,10 @@
 print("Hello, World!")
 
+print("""Print
+Multiple
+Lines
+""")
+
 #print techniques
 mystring, myfloat, myint = "hello" , 10.0, 20
 if mystring == "hello":
@@ -8,6 +13,13 @@ if isinstance(myfloat, float) and myfloat == 10.0:
     print("Float: %f" % myfloat)
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
+
+
+a=5
+print(f'a is {a}') # Preferred method for cvpr.
+print('a is {}'.format(a))
+print('a is ' + str(a))
+print('a is %d %d' % (a, a))
 
 # string.strip(characters)
 #The strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end) 
