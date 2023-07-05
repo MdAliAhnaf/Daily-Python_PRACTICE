@@ -67,6 +67,7 @@ if 1<=a<=10 ** 10 and 1<=b<=10 ** 10:
 else: 
     print("Out of the range of 1 to 10**10")
 
+
 #python division hacker-rank
 a = int(input())
 b = int(input())
@@ -74,8 +75,8 @@ b = int(input())
 print (int(a/b))
 print(float(a/b)) 
 
-#python loops hacker-rank
 
+#python loops hacker-rank
 n = int(input().strip())
 if 1<=n<=20:
     for i in range(0, n):
@@ -83,8 +84,8 @@ if 1<=n<=20:
 else: 
     print("Out of the range of 1 to 20")
 
-#python function hacker-rank
 
+#python function hacker-rank
 def is_leap(year):
     leap = False   
     if 1900<=year<=(10**5):  
@@ -115,8 +116,8 @@ def add():
     
 print(add())
 
-#python function hacker-rank 123...n
 
+#python function hacker-rank 123...n
 # By default Python‘s print() function ends with a newline
 # By default, the value of this parameter is ‘\n’ set end = '\n'
 
@@ -130,8 +131,8 @@ if 1<=n<=150:
 else: 
     print("Out of the range of 1 to 20")
 
-#python math
 
+#python math
 import math
 AB = float(input().strip())
 BC = float(input().strip())
