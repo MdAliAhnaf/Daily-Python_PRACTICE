@@ -26,6 +26,16 @@ print(end = '\n')
 c = []
 c.append('a')
 c.append('b')
+c.append('c')
+print(c)
+
+c.insert(0, 'a0') #insert at index
+print(c)
+
+c.remove('b') #Remove element
+print(c)
+
+del c[0]  #Remove at index
 print(c)
 
 print(end = '\n')
@@ -49,7 +59,13 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 
 print(end = '\n')
 
+listOfLists = [
+    ['a','b','c'],
+    ['One','Two']
+]
+print(listOfLists)
 
+print(end = '\n')
 # <<TUPLE>>
 #ordered list of values
 #immutable
@@ -65,3 +81,23 @@ data = ("John", "Doe", 53.44)
 format_string = "Hello %s %s. Your current balance is $%d"
 
 print(format_string % data)
+
+# <<SETS>>
+#Set holds an unordered collection of objects
+#do not allow duplicates
+#If a program adds a duplicate item to a set, only one copy of each item remains in the collection.
+#Adding a duplicate item to a set does not result in an error. 
+#dynamically add items to a set with the add function
+
+depts = {"MBA","EEE","BBA","ARCHI"}
+print(depts, type(depts))
+
+depts.add("CS")
+print(depts)
+
+"CS" in depts
+
+depts.remove("ARCHI")
+print(depts)
+
+"ARCHI" in depts

@@ -1,4 +1,13 @@
-data = ("John", "Doe", 53.44)
-format_string = "Hello %s %s. Your current balance is $%d"
 
-print(format_string % data)
+depts = {"MBA","EEE","BBA","ARCHI"}
+print(depts, type(depts))
+
+depts.add("CS")
+print(depts)
+
+"CS" in depts
+
+depts.remove("ARCHI")
+print(depts)
+
+"ARCHI" in depts
