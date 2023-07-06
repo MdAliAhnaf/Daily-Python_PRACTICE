@@ -5,7 +5,7 @@ Multiple
 Lines
 """)
 
-#print techniques
+#print techniques <<String Formatting>>
 mystring, myfloat, myint = "hello" , 10.0, 20
 if mystring == "hello":
     print("String: %s" % mystring)
@@ -14,6 +14,8 @@ if isinstance(myfloat, float) and myfloat == 10.0:
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
 
+lotsofhellos = "hello" * 10 #print 10 times
+print(lotsofhellos) 
 
 a=5
 print(f'a is {a}') # Preferred method for cvpr.

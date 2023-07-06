@@ -1,3 +1,4 @@
-list = ['hi' , 'bye' , 0, 9]
+data = ("John", "Doe", 53.44)
+format_string = "Hello %s %s. Your current balance is $%d"
 
-print(list)
+print(format_string % data)
