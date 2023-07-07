@@ -1,6 +1,7 @@
 # <<LIST>>
 #items are stored sequentially
 #Lists are mutable
+#allows duplicates
 #can hold on to different data types
 
 list = ['hi' , 'bye' , 0, 9, 1, 2]
@@ -69,8 +70,9 @@ print(end = '\n')
 # <<TUPLE>>
 #ordered list of values
 #immutable
+#allows duplicates
 #in many ways, it is simillar to a list; one of the most important difference is that tuples can be used as KEYs in a dictionary or elements of a SET.
-
+#tuple() constructor to make a set
 tupl = ('morning!', 'night' , 99 , 100)
 for i in tupl:
     print(i)
@@ -81,6 +83,22 @@ data = ("John", "Doe", 53.44)
 format_string = "Hello %s %s. Your current balance is $%d"
 
 print(format_string % data)
+print(end = '\n')
+
+#tuple() constructor to make a set
+new_tupl = tuple(('hi' , 'bye' , 9, 11, 110))
+print(new_tupl)
+print(new_tupl[-1])
+print(new_tupl[2:3])
+print(new_tupl[0:])
+print(new_tupl[:4])
+print(end = '\n')
+
+#normal check
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+print(end = '\n')  
 
 # <<SETS>>
 #Set holds an unordered collection of objects
@@ -94,18 +112,13 @@ print(depts, type(depts))
 
 depts.add("CS")
 print(depts)
-
+print("CS" in depts)
+#If the item to remove does not exist, remove() will raise an error.
 depts.remove("ARCHI")
+#If the item to remove does not exist, discard() will NOT raise an error. if exists it removes
+depts.discard("lol")
 
-# "CS" in depts #in jupyter notebook
-def detect_add():
-    if "CS" in depts:
-      return True 
-    else:
-        return False
-print(detect_add())
-
-# "ARCHI" in depts #in jupyter notebook
+# "ARCHI" in depts #in jupyter notebook prints the last cell
 def detect_rem():
     if "ARCHI"  in depts:
       return True  
@@ -117,4 +130,27 @@ print(end = '\n')
 print(depts)
 
 thisset = {"apple", "cherry", True, 1, 2} # True and 1 are same <<no-duplicates>>
+print(thisset, "length:" ,len(thisset), (type(thisset)))
+
+#set() constructor to make a set
+new_set = set(('hi' , 'bye' , 0, 9, 1, 2))
+print(new_set , (type(new_set)))
+print(end = '\n')
+
+#update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.)
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+thisset.update(mylist)
+print(thisset)
+
+#pop() method to remove an item, but this method will remove a random item
+thisset.pop()
+print(thisset)
+
+#clear() method empties the set <<blank set with no value>> but the set remains there
+thisset.clear()
+print(thisset)
+
+#del keyword will delete the set completely <<shows error>>
+del thisset
 print(thisset)
