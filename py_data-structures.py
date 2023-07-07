@@ -95,9 +95,26 @@ print(depts, type(depts))
 depts.add("CS")
 print(depts)
 
-"CS" in depts
-
 depts.remove("ARCHI")
+
+# "CS" in depts #in jupyter notebook
+def detect_add():
+    if "CS" in depts:
+      return True 
+    else:
+        return False
+print(detect_add())
+
+# "ARCHI" in depts #in jupyter notebook
+def detect_rem():
+    if "ARCHI"  in depts:
+      return True  
+    else:
+        return False
+print(detect_rem())
+
+print(end = '\n')
 print(depts)
 
-"ARCHI" in depts
+thisset = {"apple", "cherry", True, 1, 2} # True and 1 are same <<no-duplicates>>
+print(thisset)
