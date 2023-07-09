@@ -20,7 +20,8 @@ print(astring.lower())
 print(astring.startswith("Hello")) #checks true or false if the matching string start with that particular 
 print(astring.endswith("asdfasdfasdf")) #checks true or false if the matching string ends with that particular 
 
-afewwords = astring.split(" ") #splits at a space, the first item in the list will be "Hello", and the second will be "world!".
+#split() method splits a string into a list
+afewwords = astring.split(" ") #splits at a space, the first item in the list will be "Hello", and the second will be "world!". 
 print(afewwords)
 print(end = '\n')
 

@@ -94,12 +94,12 @@ print(new_tupl[0:])
 print(new_tupl[:4])
 print(end = '\n')
 
-c_tuple = ("apple", "banana", "cherry")
-temp = list(c_tuple) #convert the tuple into a list
+c_tupl = ("apple", "banana", "cherry")
+temp = list(c_tupl) #convert the tuple into a list
 temp[1] = "kiwi" #change the list at index
 temp.insert(4, "orange")
-c_tuple = tuple(temp) #convert the list back into a tuple
-print(c_tuple)
+c_tupl = tuple(temp) #convert the list back into a tuple
+print(c_tupl)
 print(end = '\n')
 
 fruits = ("apple", "banana", "Jack Fruit") #Packing a tuple
@@ -194,9 +194,10 @@ print(thisset)
 #del keyword will delete the set completely <<shows error>>
 del thisset
 print(thisset)
+print(end = '\n')
 
 print(set("Eric"))
-
+#cosidering a is set 1 and b is set 2
 a = set(["Jake", "John", "Eric"]) #converting list to set
 print(a)
 #same
@@ -210,3 +211,52 @@ print(a.intersection(b)) #takes the common
 print(a.symmetric_difference(b))  #attended only one of the events / non-common
 print(a.difference(b)) #members attended only one event and not the other
 print(a.union(b)) #list of all participants 
+
+# <<Dictionaries>>
+# a collection of name-value pairs <store data values in key:value pairs>
+# As of Python version 3.7, dictionaries are ordered #In Python 3.6 and earlier, dictionaries are unordered.
+# a collection which is ordered*, changeable and do not allow duplicates
+# data type similar to arrays, but works with keys and values instead of indexes
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(car, type(car))
+print("Paired key's value of the key BRAND: " + car["brand"]) #prints key's value as pairs
+print(end = '\n')
+x = car.keys()
+y = car.values()
+print(x) #before the change
+print(x)
+
+car["color"] = "white"
+car["color"] = "black"
+car["year"] = "2022"
+print(x) #after the change
+print(y)
+print(end = '\n')
+
+
+z = car.items()
+print(z)
+if "color" in car:
+  print("Yes, 'color' is one of the keys in the car dictionary")
+else:
+   print("ERROR")
+print(end = '\n')
+
+car.update({"year": 2023})
+print(car)
+print(end = '\n')
+# popitem() method removes the <<last inserted>> item (in versions before 3.7, a random item is removed instead)
+car.popitem()
+print(car)
+del car["model"]
+print(car)
+del car # del keyword can  delete the dictionary completely
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+x = thisdict.get("country")
