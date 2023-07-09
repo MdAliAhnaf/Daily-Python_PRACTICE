@@ -1,81 +1,3 @@
-print("Hello, World!")
-
-print("""Print
-Multiple
-Lines
-""")
-print(end = '\n')
-#print techniques <<String Formatting>>
-
-astring = "Hello world!"
-print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one
-print(astring.count("l"))
-print(astring[3:7]) 
-print(astring[10])
-print(astring[-1])
-print(astring[::-1]) #reverse a string
-print(astring.upper())
-print(astring.lower())
-
-print(astring.startswith("Hello")) #checks true or false if the matching string start with that particular 
-print(astring.endswith("asdfasdfasdf")) #checks true or false if the matching string ends with that particular 
-
-afewwords = astring.split(" ") #splits at a space, the first item in the list will be "Hello", and the second will be "world!".
-print(afewwords)
-print(end = '\n')
-
-mystring, myfloat, myint = "hello" , 10.0, 20
-if mystring == "hello":
-    print("String: %s" % mystring)
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print("Float: %f" % myfloat)
-if isinstance(myint, int) and myint == 20:
-    print("Integer: %d" % myint)
-
-
-print(end = '\n')
-lotsofhellos = "hello" * 10 #print 10 times
-print(lotsofhellos) 
-print(end = '\n')
-
-a=5
-print(f'a is {a}') # Preferred method for cvpr.
-print('a is {}'.format(a))
-print('a is ' + str(a))
-print('a is %d %d' % (a, a))
-
-#boolean
-x = [1,2,3]
-y = [1,2,3]
-print(x == y) # Prints out True
-print(x is y) # Prints False "is" operator does not match the values of the variables, but the instances themselves
-
-t = True
-f = False
-print(type(t)) # Prints "<class 'bool'>"
-print(not t)   # Logical NOT; prints "False"
-print(t != f)  # Logical XOR; prints "True"
-print(end = '\n')
-
-#function practice
-def cube(num): 
-    return (num*num*num)
-
-x = cube(3)
-
-y = int(input("Input the number to be added with 27: "))
-
-def add():
-    z = x + y
-    return (z)   
-    
-print(add())
-print(end = '\n')
-
-# string.strip(characters)
-#The strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end) 
-#characters (space is the default leading character to remove)
-
 #if-else hacker-rank
 n = int(input().strip())
 #n = int(input("Enter an integer number: ").strip())
@@ -170,3 +92,5 @@ if 0<AB<=100 and 0<BC<=100:
 else: 
     print("Out of the range of 1 to 100")
 print(end = '\n')
+
+#python math Triangle Quest 2
