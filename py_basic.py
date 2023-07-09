@@ -4,8 +4,23 @@ print("""Print
 Multiple
 Lines
 """)
-
+print(end = '\n')
 #print techniques <<String Formatting>>
+
+astring = "Hello world!"
+print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one
+print(astring.count("l"))
+print(astring[3:7]) 
+print(astring[10])
+print(astring[-1])
+print(astring[::-1]) #reverse a string
+print(astring.upper())
+print(astring.lower())
+
+print(astring.startswith("Hello")) #checks true or false if the matching string start with that particular 
+print(astring.endswith("asdfasdfasdf")) #checks true or false if the matching string ends with that particular 
+
+
 mystring, myfloat, myint = "hello" , 10.0, 20
 if mystring == "hello":
     print("String: %s" % mystring)
@@ -14,8 +29,11 @@ if isinstance(myfloat, float) and myfloat == 10.0:
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
 
+
+print(end = '\n')
 lotsofhellos = "hello" * 10 #print 10 times
 print(lotsofhellos) 
+print(end = '\n')
 
 a=5
 print(f'a is {a}') # Preferred method for cvpr.
@@ -43,6 +61,7 @@ if 1<=n<=100:
         print("Weird")
 else: 
     print("Out of the range of 1 to 100")
+print(end = '\n')
 
 #boolean
 x = [1,2,3]
@@ -55,6 +74,7 @@ f = False
 print(type(t)) # Prints "<class 'bool'>"
 print(not t)   # Logical NOT; prints "False"
 print(t != f)  # Logical XOR; prints "True"
+print(end = '\n')
 
 #arithmetic operators hacker-rank
 a = int(input())
@@ -68,7 +88,7 @@ if 1<=a<=10 ** 10 and 1<=b<=10 ** 10:
     
 else: 
     print("Out of the range of 1 to 10**10")
-
+print(end = '\n')
 
 #python division hacker-rank
 a = int(input())
@@ -76,7 +96,7 @@ b = int(input())
 
 print (int(a/b))
 print(float(a/b)) 
-
+print(end = '\n')
 
 #python loops hacker-rank
 n = int(input().strip())
@@ -85,7 +105,7 @@ if 1<=n<=20:
             print(i ** 2)    
 else: 
     print("Out of the range of 1 to 20")
-
+print(end = '\n')
 
 #python function hacker-rank
 def is_leap(year):
@@ -103,6 +123,7 @@ def is_leap(year):
   
 year = int(input().strip())
 print(is_leap(year))
+print(end = '\n')
 
 #function practice
 def cube(num): 
@@ -117,7 +138,7 @@ def add():
     return (z)   
     
 print(add())
-
+print(end = '\n')
 
 #python function hacker-rank 123...n
 # By default Python‘s print() function ends with a newline
@@ -132,7 +153,7 @@ if 1<=n<=150:
             #print(i, end = '@no-new_line-concate')    
 else: 
     print("Out of the range of 1 to 20")
-
+print(end = '\n')
 
 #python math
 import math
@@ -145,5 +166,6 @@ if 0<AB<=100 and 0<BC<=100:
     print(f'{round(x)}{chr(176)}') #character that represents the unicode 176 as (angle/degree)
 else: 
     print("Out of the range of 1 to 100")
+print(end = '\n')
 
 #python math Triangle Quest 2
