@@ -94,10 +94,48 @@ print(new_tupl[0:])
 print(new_tupl[:4])
 print(end = '\n')
 
+c_tuple = ("apple", "banana", "cherry")
+temp = list(c_tuple) #convert the tuple into a list
+temp[1] = "kiwi" #change the list at index
+temp.insert(4, "orange")
+c_tuple = tuple(temp) #convert the list back into a tuple
+print(c_tuple)
+print(end = '\n')
+
+fruits = ("apple", "banana", "Jack Fruit") #Packing a tuple
+(red, yellow, green) = fruits #Unpacking a tuple
+
+print(red)
+print(yellow)
+print(green)
+print(end = '\n')
+
+fruits_star = ("apple", "banana", "cherry", "strawberry", "raspberry") #Packing a tuple
+(green, yellow, *red) = fruits_star #adding an * to the variable name and the values will be assigned to the variable as a list
+
+print(green)
+print(yellow)
+print(red)
+print(end = '\n')
+
+fruits_d = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits_d #dynamically assigning
+
+print(green)
+print(tropic)
+print(red)
+print(end = '\n')
+
 #normal check
 thistuple = ("apple", "banana", "cherry")
 if "apple" in thistuple:
   print("Yes, 'apple' is in the fruits tuple")
+print(end = '\n')  
+
+tuple_add = thistuple + fruits_d
+print(tuple_add)
+count_apple = ("Number of apples: %d" % (tuple_add.count("apple")))
+print(count_apple,"Index number of pineapple:", tuple_add.index("pineapple"))
 print(end = '\n')  
 
 # <<SETS>>
@@ -140,7 +178,9 @@ print(end = '\n')
 #update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.)
 thisset = {"apple", "banana", "cherry"}
 mylist = ["kiwi", "orange"]
+add_tuple_update = tuple(("Jack Fruit" , "Mango"))
 thisset.update(mylist)
+thisset.update(add_tuple_update)
 print(thisset)
 
 #pop() method to remove an item, but this method will remove a random item
@@ -154,3 +194,17 @@ print(thisset)
 #del keyword will delete the set completely <<shows error>>
 del thisset
 print(thisset)
+
+print(set("Eric"))
+
+a = set(["Jake", "John", "Eric"]) #converting list to set
+print(a)
+#same
+print(set("Eric".split())) #split() method splits a string into a list
+print(end = '\n')
+
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.intersection(b)) #takes the common
+print(a.symmetric_difference(b))   #attended only one of the events / non-common

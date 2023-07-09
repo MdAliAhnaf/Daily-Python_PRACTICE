@@ -1,3 +1,5 @@
-thistuple = ("apple", "banana", "cherry")
-if "apple" in thistuple:
-  print("Yes, 'apple' is in the fruits tuple")
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.intersection(b)) #takes the common
+print(a.symmetric_difference(b))
