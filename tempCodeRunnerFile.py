@@ -1,28 +1,8 @@
-car = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-print(car, type(car))
-print("Paired key's value of the key BRAND: " + car["brand"]) #prints key's value as pairs
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+upper_newlist = [x.upper() for x in fruits]
+new_list = [x for x in range(120) if x%2 == 0]
+print(newlist)
+print(upper_newlist)
+print(new_list)
 print(end = '\n')
-x = car.keys()
-y = car.values()
-print(x) #before the change
-print(y)
-
-car["color"] = "white"
-car["color"] = "black"
-car["year"] = "2022"
-print(x) #after the change
-print(y)
-print(end = '\n')
-
-#The setdefault() method returns the value of the item with the specified key.
-#setdefault() works when key is in the dictionary
-df = car.setdefault("color", "white")
-print(df)
-print(end = '\n')
-# If the key does not exist, insert the key, with the specified value <<default_value is provided>>
-df_not_exists = car.setdefault("tyre", "CEAT")
-print(df_not_exists)

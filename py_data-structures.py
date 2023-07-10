@@ -1,3 +1,5 @@
+#              <<<<<<<<<< Data-Structures / Collections >>>>>>>>>>
+
 # <<LIST>>
 #items are stored sequentially
 #Lists are mutable
@@ -67,6 +69,44 @@ listOfLists = [
 print(listOfLists)
 
 print(end = '\n')
+
+#<< List Comprehension >>
+#offers a shorter syntax when you want to create a new list based on the values of an existing list in a single, readable line.
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# newlist = []
+# for x in fruits:
+#   if "a" in x:
+#     newlist.append(x)
+# print(newlist)
+                                                                         # avoid doing this !!!!
+                                                                            # <<< Instead >>>
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+upper_newlist = [x.upper() for x in fruits]
+new_list = [x for x in range(120) if x%2 == 0]
+print(newlist)
+print(upper_newlist)
+print(new_list)
+print(end = '\n')
+
+arr1 = [0,1,2,3,4,5,6,7,8,9]
+arr1_copy_newlist = [i for i in arr1]
+print(arr1_copy_newlist)
+
+sq = [i**2 for i in arr1]
+print(sq)
+
+sq_even = [i**2 for i in arr1 if i%2 == 0]
+print(sq_even)
+print(end = '\n')
+
+numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+positive_numbers = [i for i in numbers if i>0]
+print(positive_numbers)   
+
+print(end = '\n')
+
 # <<TUPLE>>
 #ordered list of values
 #immutable
