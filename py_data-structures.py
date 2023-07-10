@@ -238,6 +238,16 @@ print(x) #after the change
 print(y)
 print(end = '\n')
 
+#The setdefault() method returns the value of the item with the specified key.
+#setdefault() works when key is in the dictionary
+df = car.setdefault("color", "white")
+print(df)
+print(end = '\n')
+# If the key does not exist, insert the key, with the specified value <<default_value is provided>>
+df_not_exists = car.setdefault("tyre", "CEAT")
+print(df_not_exists)
+
+
 z = car.items() #complete dictionary items
 print(z)
 if "color" in car:
@@ -312,3 +322,5 @@ value = 'vowel'
 # creates a dictionary with keys and values
 vowels = dict.fromkeys(keys, value)
 print(vowels)
+print(end = '\n')
+
