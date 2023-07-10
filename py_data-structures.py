@@ -1,4 +1,4 @@
-#              <<<<<<<<<< Data-Structures / Collections >>>>>>>>>>
+                                          #      <<<<<<<<<< Data-Structures / Collections >>>>>>>>>>
 
 # <<LIST>>
 #items are stored sequentially
@@ -104,6 +104,10 @@ print(end = '\n')
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 positive_numbers = [i for i in numbers if i>0]
 print(positive_numbers)   
+print(end = '\n')
+# list comprehension on dictionaries
+dictio = {(a,a): (a,a**2) for a in range(10) if a%2 == 0}
+print(dictio)
 
 print(end = '\n')
 
