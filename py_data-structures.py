@@ -89,7 +89,7 @@ print(end = '\n')
 new_tupl = tuple(('hi' , 'bye' , 9, 11, 110))
 print(new_tupl)
 print(new_tupl[-1])
-print(new_tupl[2:3])
+print(new_tupl[2:3]) # slicing operator
 print(new_tupl[0:])
 print(new_tupl[:4])
 print(end = '\n')
@@ -229,7 +229,7 @@ print(end = '\n')
 x = car.keys()
 y = car.values()
 print(x) #before the change
-print(x)
+print(y)
 
 car["color"] = "white"
 car["color"] = "black"
@@ -273,3 +273,42 @@ for i in d:
 print(end = '\n')
 for i,y in d.items():
     print('A %s has %d legs' % (i, y)) 
+print(end = '\n')
+
+#nested dictionaries
+child1 = {
+  "name" : "Emil",
+  "year" : 2004,
+  "height" : str(168) + ' in cm'
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007,
+  "height" : str(100) + ' in cm'
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011,
+  "height" : str(130) + ' in cm'
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily)
+print(myfamily["child1"])
+print(end = '\n')
+print(myfamily["child2"]["name"], myfamily["child2"]["year"])
+print(end = '\n')
+
+#The fromkeys() method creates a dictionary from the given sequence of keys and values.
+# set of vowels # keys for the dictionary
+keys = {'a', 'e', 'i', 'o', 'u' }
+# assign string to the value # value for the dictionary
+value = 'vowel'
+# creates a dictionary with keys and values
+vowels = dict.fromkeys(keys, value)
+print(vowels)
