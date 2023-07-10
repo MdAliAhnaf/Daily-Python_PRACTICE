@@ -7,7 +7,6 @@
 #can hold on to different data types
 
 list = ['hi' , 'bye' , 0, 9, 1, 2]
-
 print(list)
 print(list[2], list[1], list[-3]) #0, 1, 2, .... n [index] [-n] -> -1, - 2, .... -n (counting from backwards)
 
@@ -139,7 +138,8 @@ print(new_tupl[:4])
 print(end = '\n')
 
 c_tupl = ("apple", "banana", "cherry")
-temp = list(c_tupl) #convert the tuple into a list
+#temp = list(c_tupl)#convert the tuple into a list
+temp = [*c_tupl,]#convert the tuple into a list
 temp[1] = "kiwi" #change the list at index
 temp.insert(4, "orange")
 c_tupl = tuple(temp) #convert the list back into a tuple
@@ -237,7 +237,6 @@ print(thisset)
 
 #del keyword will delete the set completely <<shows error>>
 del thisset
-print(thisset)
 print(end = '\n')
 
 print(set("Eric"))
