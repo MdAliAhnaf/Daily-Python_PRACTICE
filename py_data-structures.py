@@ -138,9 +138,10 @@ print(new_tupl[:4])
 print(end = '\n')
 
 c_tupl = ("apple", "banana", "cherry")
-#temp = list(c_tupl)#convert the tuple into a list
-temp = [*c_tupl,]#convert the tuple into a list
-temp[1] = "kiwi" #change the list at index
+#temp = list(c_tupl) # convert the tuple into a list
+# Using * unpacking method
+temp = [*c_tupl,] # convert the tuple into a list
+temp[1] = "kiwi" # change the list at index
 temp.insert(4, "orange")
 c_tupl = tuple(temp) #convert the list back into a tuple
 print(c_tupl)
