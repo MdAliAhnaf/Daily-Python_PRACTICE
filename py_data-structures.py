@@ -1,4 +1,4 @@
-                                          #      <<<<<<<<<< Data-Structures / Collections >>>>>>>>>>
+                                          # <<<<<<<<<< Data-Structures / Collections >>>>>>>>>>
 
 # <<LIST>>
 #items are stored sequentially
