@@ -112,7 +112,6 @@ print(results)
 # Like filter and map the reduce function also works on a list. However, the result of the reduce is a <<single value>>. 
 
 from functools import reduce
-
 numbers = [3, 4, 6, 9, 34, 12]
 def custom_sum(first, second):
     return first + second
@@ -127,3 +126,25 @@ print(end = '\n')
 l = [ 1, 10, 20, 3, -2, 0]
 result = reduce(lambda x,y: x+y,l)
 print(result)
+print(end = '\n')
+
+# << Generators >>
+# Generators are simple functions which return an iterable set of items, one at a time, in a special way.
+# When an iteration over a set of item starts using the for statement, the generator is run
+# Once the generator's function code reaches a "yield" statement, the generator yields its execution back to the for loop, returning a new value from the set.
+# The generator function can generate as many values (possibly infinite) as it wants, yielding each one in its turn.
+
+import random
+def lottery():
+    # returns 6 numbers between 1 and 40
+    for i in range(6):
+        yield random.randint(1, 40)
+
+    # returns a 7th number between 1 and 15
+    print(end = '\n')
+    yield random.randint(1, 15)
+
+for random_number in lottery():
+       print("And the next number is... %d!" %(random_number))
+
+print(end = '\n')
