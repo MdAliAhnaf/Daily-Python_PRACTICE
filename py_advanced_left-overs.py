@@ -148,3 +148,57 @@ for random_number in lottery():
        print("And the next number is... %d!" %(random_number))
 
 print(end = '\n')
+
+# << Classes and Objects >>
+# Python is an object oriented programming language
+# Almost everything in Python is an object, with its properties and methods
+# A Class is like an object constructor, or a "blueprint" for creating objects and essentially a template to create objects
+# Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes.
+
+class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class.")
+
+myobjectx = MyClass() # "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".
+myobjecty = MyClass()
+
+myobjecty.variable = "yackity"
+
+# Then print out both values
+print(myobjectx.variable)
+print(myobjecty.variable)
+print(end = '\n')
+
+# The __init__() function, is a special function that is called when the class is being initiated. 
+# All classes have a function called __init__(), which is always executed when the class is being initiated.
+# It's used for assigning values to object properties, or other operations that are necessary to do when the object is being created in a class .
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+# The string representation of an object WITHOUT the __str__() function
+
+myobjectp1 = Person("John", 36)
+
+print(myobjectp1.name)
+print(myobjectp1.age)
+
+print(end = '\n')
+# The __str__() function controls what should be returned when the class object is represented as a string
+# If the __str__() function is not set, the string representation of the object is returned
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def __str__(self):                     # The string representation of an object WITH the __str__() function
+    return f"NAME: {self.name} AGE:({self.age})"
+
+myobjectp1 = Person("John", 36)
+print(myobjectp1)
+
+print(end = '\n')
