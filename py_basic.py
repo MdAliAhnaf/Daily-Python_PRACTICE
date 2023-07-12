@@ -44,7 +44,9 @@ print(f'a is {a}') # Preferred method for cvpr.
 print('a is {}'.format(a))
 print('a is ' + str(a))
 print('a is %d %d' % (a, a))
+print(end = '\n')
 
+print(1, 2, 3, sep=' < ')
 #boolean
 x = [1,2,3]
 y = [1,2,3]
@@ -58,7 +60,48 @@ print(not t)   # Logical NOT; prints "False"
 print(t != f)  # Logical XOR; prints "True"
 print(end = '\n')
 
+#Arithmetic - operations
+print(5 / 2) # float
+print(5 // 2) # // operator -> rounded down to the next integer
+#Exponentiation ``a`` raised to the power of ``b
+a, b = 2 , 3
+print (a ** b)
+print(end = '\n')
+
+#Built-in Functions
+# min and max return the minimum and maximum of their arguments, respectively...
+print(min(1, 2, 3))
+print(max(1, 2, 3))
+
+# abs returns the absolute value of an argument
+print(abs(32))
+print(abs(-32))
+
+
 #function practice
+def round_to_two_places(num):
+    return(round(num, 2))
+
+print(round_to_two_places(3.14159))
+
+def wants_plain_hotdog(ketchup, mustard, onion): #no toppings
+    return not (ketchup or mustard or onion)
+print(wants_plain_hotdog(True,True,True))
+
+def exactly_one_topping(ketchup, mustard, onion):
+    """Return whether the customer wants exactly one of the three available toppings
+    on their hot dog.
+    """
+    return (ketchup + mustard + onion) == 1
+
+def to_smash(total_candies, number_of_friends=3):
+    # Return the number of leftover candies that must be smashed after distributing the given number of candies evenly between 3 friends.
+    return total_candies % number_of_friends
+
+total_candies = int(input("Enter the total number of candies: "))
+print(to_smash(total_candies))
+
+
 def cube(num): 
     return (num*num*num)
 
@@ -215,3 +258,4 @@ if 0<AB<=100 and 0<BC<=100:
 else: 
     print("Out of the range of 1 to 100")
 print(end = '\n')
+

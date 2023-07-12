@@ -5,6 +5,8 @@
 #Lists are mutable
 #allows duplicates
 #can hold on to different data types
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+print(sorted(planets))
 
 list = ['hi' , 'bye' , 0, 9, 1, 2]
 print(list)
@@ -182,6 +184,14 @@ print(tuple_add)
 count_apple = ("Number of apples: %d" % (tuple_add.count("apple")))
 print(count_apple,"Index number of pineapple:", tuple_add.index("pineapple"))
 print(end = '\n')  
+
+#Tuples are often used for functions that have multiple return values.
+#For example, the as_integer_ratio() method of float objects returns a numerator and a denominator in the form of a tuple
+x = 0.125
+print(x.as_integer_ratio())
+#These multiple return values can be individually assigned as follows
+numerator, denominator = x.as_integer_ratio()
+print(numerator / denominator)
 
 # <<SETS>>
 #Set holds an unordered collection of objects
