@@ -5,9 +5,28 @@ Multiple
 Lines
 """)
 print(end = '\n')
+
 #print techniques <<String Formatting>>
 #print('Pluto's a planet!')  # a single quote character inside a single-quoted string, Python gets confused
 print('Pluto\'s a planet!')  # fix this by "escaping" the single quote with a backslash
+planet = 'Pluto'
+print([char+'! ' for char in planet])
+
+claim = "Pluto is a planet!"
+word = claim.split()
+print(claim.index('plan')) # Searching for the first index of a substring
+print(claim.split()) #split() method splits a string into a list
+print(end = '\n')
+
+datestr = '1956-01-31'
+year, month, day = datestr.split('-')
+print('/'.join([month, day, year]))
+
+print(' 👏 '.join([i.upper() for i in claim])) # # Yes, we can put unicode characters right in our string literals :)
+print(' 👏 '.join([i.upper() for i in word]))
+
+print(end = '\n')
+
 
 astring = "Hello world!"
 print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one
@@ -35,8 +54,14 @@ if isinstance(myfloat, float) and myfloat == 10.0:
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
 
-
 print(end = '\n')
+def is_valid_zip(zip_code):
+    """Returns whether the input string is a valid (5 digit) zip code
+    """
+    return (len(zip_code) == 5 and zip_code.isdigit())
+
+
+
 lotsofhellos = "hello" * 10 #print 10 times
 print(lotsofhellos) 
 print(end = '\n')
