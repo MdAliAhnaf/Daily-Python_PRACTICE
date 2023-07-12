@@ -7,6 +7,18 @@
 #can hold on to different data types
 planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 print(sorted(planets))
+print(end = '\n')
+
+a = [1, 2, 3]
+b = [1, [2, 3]]
+c = []
+d = [1, 2, 3][1:]
+
+# Put your predictions in the list below. Lengths should contain 4 numbers, the
+# first being the length of a, the second being the length of b and so on.
+lengths = [3,2,0,2]
+# d. The expression is the same as the list [2, 3], which has length 2.
+
 
 list = ['hi' , 'bye' , 0, 9, 1, 2]
 print(list)
@@ -44,6 +56,21 @@ print(c)
 
 print(end = '\n')
 
+def purple_shell(racers):
+    """Given a list of racers, set the first place racer (at the front of the list) to last
+    place and vice versa.
+    
+    >>> r = ["Mario", "Bowser", "Luigi"]
+    >>> purple_shell(r)
+    >>> r
+    ["Luigi", "Bowser", "Mario"]
+    """
+    temp = racers[0]
+    racers[0] =  racers[-1]
+    racers[-1] = temp
+  
+print(end = '\n')
+
 x = object()
 y = object()
 
@@ -70,6 +97,17 @@ listOfLists = [
 print(listOfLists)
 
 print(end = '\n')
+# party_attendees = ['Adela', 'Fleda', 'Owen', 'May', 'Mona', 'Gilbert', 'Ford'] . 
+# A guest is considered 'fashionably late' if they arrived after at least half of the party's guests. 
+# Complete the function below which takes a list of party attendees as well as a person, and tells us whether that person is fashionably late.
+
+def fashionably_late(arrivals, name):
+    """Given an ordered list of arrivals to the party and a name, return whether the guest with that
+    name was fashionably late.
+    """
+    order = arrivals.index(name)
+    return order >= len(arrivals) / 2 and order != len(arrivals) - 1
+
 
 #<< List Comprehension >>
 #offers a shorter syntax when you want to create a new list based on the values of an existing list in a single, readable line.
