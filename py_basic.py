@@ -6,6 +6,8 @@ Lines
 """)
 print(end = '\n')
 #print techniques <<String Formatting>>
+#print('Pluto's a planet!')  # a single quote character inside a single-quoted string, Python gets confused
+print('Pluto\'s a planet!')  # fix this by "escaping" the single quote with a backslash
 
 astring = "Hello world!"
 print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one

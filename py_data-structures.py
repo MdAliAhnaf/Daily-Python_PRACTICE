@@ -140,16 +140,30 @@ sq_even = [i**2 for i in arr1 if i%2 == 0]
 print(sq_even)
 print(end = '\n')
 
+def has_lucky_number(nums):
+    """Return whether the given list of numbers is lucky. A lucky list contains
+    at least one number divisible by 7.
+    """
+    return any([num % 7 == 0 for num in nums]) #The any() function returns True if any item in an iterable are true, otherwise it returns False
+
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 positive_numbers = [i for i in numbers if i>0]
 print(positive_numbers)   
 print(end = '\n')
+
 # list comprehension on dictionaries
 dictio = {(a,a): (a,a**2) for a in range(10) if a%2 == 0}
 print(dictio)
 
 print(end = '\n')
 
+def menu_is_boring(meals):
+    """Given a list of meals served over some period of time, return True if the
+    same meal has ever been served two days in a row, and False otherwise.
+    """
+    return any(meals[i] == meals[i+1] for i in range(len(meals)-1)) #The any() function returns True if any item in an iterable are true, otherwise it returns False
+
+                                
 # <<TUPLE>>
 #ordered list of values
 #immutable
