@@ -1,9 +1,13 @@
-import math as mt
+person1 = dict(name='Jane Judy', sex='Female', age=28, married=False)
+print(person1)
 
-#import * makes all the module's variables directly accessible to you (without any dotted prefix)
-from math import log, pi
-from numpy import asarray
-print(dir(mt))
-print(end = '\n')
-print(mt.pi)
-print(pi, log(32, 2))
+person1['address'] = '1, Penny Lane'
+print(person1)
+person1.pop('address')
+print(person1)
+print(person1.keys())
+print(person1.values())
+print(person1.items())
+
+print(person1.get("name"))
+print(person1.get("address", "Unknown"))

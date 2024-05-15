@@ -6,9 +6,19 @@ Lines
 """)
 print(end = '\n')
 
+
 #print techniques <<String Formatting>>
 #print('Pluto's a planet!')  # a single quote character inside a single-quoted string, Python gets confused
 print('Pluto\'s a planet!')  # fix this by "escaping" the single quote with a backslash
+
+another_pun = "The first time I got a universal remote control, I thought to myself \"This changes everything\"."
+print(another_pun)
+print(end = '\n')
+
+new_line = "The first time I got a universal remote control, I thought to myself \n \"This changes everything\"."
+print(new_line)
+print(end = '\n')
+
 planet = 'Pluto'
 print([char+'! ' for char in planet])
 
@@ -37,6 +47,11 @@ print(astring[-1])
 print(astring[::-1]) #reverse a string
 print(astring.upper())
 print(astring.lower())
+print(astring.capitalize()) # changes first character to uppercase
+
+today = 'Saturday'
+another_day = today.replace("Satur", "Wednes")
+print(another_day)
 
 print(astring.startswith("Hello")) #checks true or false if the matching string start with that particular 
 print(astring.endswith("asdfasdfasdf")) #checks true or false if the matching string ends with that particular 
@@ -45,6 +60,13 @@ print(astring.endswith("asdfasdfasdf")) #checks true or false if the matching st
 afewwords = astring.split(" ") #splits at a space, the first item in the list will be "Hello", and the second will be "world!". 
 print(afewwords)
 print(end = '\n')
+
+print("Sun,Mon,Tue,Wed,Thu,Fri,Sat".split(","))
+
+a_long_line = "       This is a long line with some space before, after,     and some space in the middle..    "
+a_long_line_stripped = a_long_line.strip() #removes whitespace characters from the beginning and end of a string.
+print(a_long_line_stripped)
+
 
 mystring, myfloat, myint = "hello" , 10.0, 20
 if mystring == "hello":
@@ -285,4 +307,19 @@ if 0<AB<=100 and 0<BC<=100:
 else: 
     print("Out of the range of 1 to 100")
 print(end = '\n')
+
+
+print("INCREMENTED FOR LOOP") 
+for x in range(0, 5, 2): 
+    print(x) 
+  
+# this is for increment operator here start = 5, 
+# stop = -1 and step = -1 
+print("\n DECREMENTED FOR LOOP") 
+for i in range(6, -4, -2): 
+    print(i) 
+    
+
+print ( ((2 + 5) * (1+1)) / (2+2) )
+
 

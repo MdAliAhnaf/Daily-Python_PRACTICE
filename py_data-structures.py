@@ -14,6 +14,8 @@ b = [1, [2, 3]]
 c = []
 d = [1, 2, 3][1:]
 
+print(1 in a)
+
 # Put your predictions in the list below. Lengths should contain 4 numbers, the
 # first being the length of a, the second being the length of b and so on.
 lengths = [3,2,0,2]
@@ -31,6 +33,25 @@ mylist = [1,2,3]
 print("My list: %s" % mylist)
 
 print(end = '\n')
+
+
+fruits = ['apple', 'banana', 'cherry']
+a_list = [23, 'hello', None, 3.14, fruits, 3 <= 5]
+print(a_list)
+print(end = '\n')
+print(a_list[2:100])
+print(a_list[12:10]) #empty list
+print(end = '\n')
+print(a_list[2:])
+print(a_list[:5])
+
+print(a_list[2:] or a_list[:5])
+
+print(end = '\n')
+
+print(a_list[-2:-5])
+print(a_list[-5:-2])
+print(a_list[-2:-5] or a_list[-5:-2])
 
 print([1,2,3] * 3) #print the list's elements 3 times
 
@@ -129,7 +150,19 @@ print(upper_newlist)
 print(new_list)
 print(end = '\n')
 
+
 arr1 = [0,1,2,3,4,5,6,7,8,9]
+arr1_copy= arr1.copy()
+print(arr1_copy)
+
+print(arr1_copy.pop()) #pops the last element here 9
+
+arr1_copy.pop() #removes 8
+
+print(arr1_copy) #0 to 7
+
+print(end = '\n')
+
 arr1_copy_newlist = [i for i in arr1]
 print(arr1_copy_newlist)
 
@@ -430,3 +463,11 @@ vowels = dict.fromkeys(keys, value)
 print(vowels)
 print(end = '\n')
 
+print(bool(False))
+print(bool(0.0))
+print(bool(None))
+
+print(bool(True), bool(""), bool([1,2]), bool((2,3)), bool([]), bool({}), bool(set()), bool(range(0)), bool(range(10)))
+
+none_var = None
+print(type(none_var))
