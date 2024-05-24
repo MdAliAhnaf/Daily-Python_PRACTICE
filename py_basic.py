@@ -30,8 +30,10 @@ print(end = '\n')
 
 datestr = '1956-01-31'
 year, month, day = datestr.split('-')
+print (year)
 print('/'.join([month, day, year]))
 
+print('👏' .join([x for x in claim]))
 print(' 👏 '.join([i.upper() for i in claim])) # # Yes, we can put unicode characters right in our string literals :)
 print(' 👏 '.join([i.upper() for i in word]))
 
@@ -43,7 +45,10 @@ print(astring.index("o")) #returns first occurrence index number & this method o
 print(astring.count("l"))
 print(astring[3:7]) 
 print(astring[10])
-print(astring[-1])
+print(astring[:-1]) #except last one all the others
+print(astring[-1]) #selecting last one
+print(astring[::2]) # selecting in two steps from the forward of a string
+print(astring[::-2]) #reverse a string & selecting them in two steps
 print(astring[::-1]) #reverse a string
 print(astring.upper())
 print(astring.lower())
@@ -68,19 +73,43 @@ a_long_line_stripped = a_long_line.strip() #removes whitespace characters from t
 print(a_long_line_stripped)
 
 
+s , f, i = "string" , 10.00, 20
+if s == "string":
+    print("printing: %s")
+    print("printing: %s" %s)
+
+
+
 mystring, myfloat, myint = "hello" , 10.0, 20
 if mystring == "hello":
     print("String: %s" % mystring)
-if isinstance(myfloat, float) and myfloat == 10.0:
+if isinstance(myfloat, float) and myfloat == 10.0: #Return whether an object is an instance of a class or of a subclass thereof. A tuple, as in isinstance(x, (A, B, ...))
     print("Float: %f" % myfloat)
 if isinstance(myint, int) and myint == 20:
     print("Integer: %d" % myint)
 
+
+
 print(end = '\n')
+
+zip_code= 12345
 def is_valid_zip(zip_code):
     """Returns whether the input string is a valid (5 digit) zip code
     """
+    print("Zip code has 5 no of digits: %d" %zip_code)
     return (len(zip_code) == 5 and zip_code.isdigit())
+is_valid_zip(zip_code)
+
+
+
+def is_valid_zip(zip_code):
+    """Returns whether the input string is a valid (5 digit) zip code"""
+    zip_code_str = str(zip_code)
+    print("Zip code has 5 digits: %s" % zip_code_str)
+    return len(zip_code_str) == 5 and zip_code_str.isdigit()
+
+zip_code = 12345
+print(is_valid_zip(zip_code))
 
 
 
@@ -123,7 +152,7 @@ print(min(1, 2, 3))
 print(max(1, 2, 3))
 
 # abs returns the absolute value of an argument
-print(abs(32))
+print(abs(32.5))
 print(abs(-32))
 
 
@@ -134,6 +163,7 @@ def round_to_two_places(num):
 print(round_to_two_places(3.14159))
 
 def wants_plain_hotdog(ketchup, mustard, onion): #no toppings
+    #return (ketchup or mustard or onion)
     return not (ketchup or mustard or onion)
 print(wants_plain_hotdog(True,True,True))
 
@@ -253,6 +283,16 @@ print (int(a/b))
 print(float(a/b)) 
 print(end = '\n')
 
+the_3_mus = ('Athos', 'Porthos', 'Aramis')
+a_candidate = "D'Artagnan"
+
+if a_candidate in the_3_mus:
+    print ("%s is a musketeer" %a_candidate)
+else:
+    print ("%s is not a musketeer" %a_candidate)
+
+print(end = '\n')
+
 #python loops hacker-rank
 n = int(input().strip())
 if 1<=n<=20:
@@ -308,17 +348,6 @@ else:
     print("Out of the range of 1 to 100")
 print(end = '\n')
 
-
-print("INCREMENTED FOR LOOP") 
-for x in range(0, 5, 2): 
-    print(x) 
-  
-# this is for increment operator here start = 5, 
-# stop = -1 and step = -1 
-print("\n DECREMENTED FOR LOOP") 
-for i in range(6, -4, -2): 
-    print(i) 
-    
 
 print ( ((2 + 5) * (1+1)) / (2+2) )
 
