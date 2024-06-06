@@ -28,6 +28,14 @@ print(claim.index('plan')) # Searching for the first index of a substring
 print(claim.split()) #split() method splits a string into a list
 print(end = '\n')
 
+#Combine a list of strings with an empty string delimitor (computer code that separates words)
+
+list_of_string = ["ab", "cd", "ef"]
+print("".join(list_of_string))
+print(" ".join(list_of_string))
+
+print(end = '\n')
+
 datestr = '1956-01-31'
 year, month, day = datestr.split('-')
 print (year)
@@ -39,6 +47,9 @@ print(' 👏 '.join([i.upper() for i in word]))
 
 print(end = '\n')
 
+print(ord("a")) #ASCII value
+
+print(end = '\n')
 
 astring = "Hello world!"
 print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one

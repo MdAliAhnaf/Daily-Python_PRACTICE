@@ -42,7 +42,7 @@ print('The factorial of 4 is: {}'.format(result))
 
 print(end = '\n')
 
-i = 1
+#Multiply odds only
 result = 1
 
 while i < 10:
@@ -141,10 +141,16 @@ while i > 0:
     print(' ' * (max_length - i) + '*' * (2 * i - 1))
     i -= 1
 
+print(end = "\n")
 
+nums = [1,2,3]
+
+for i,n in enumerate(nums):
+    print(i,n)
 
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 
+# for x in range(len(days)):
 for x in days:
     print(x)
 
@@ -177,6 +183,9 @@ person = {
     'married': True
 }
 
+# for x in person:
+#     print(x, person[x])
+
 for key in person:
     print(key, person[key]) #person[key] to access pair value's
 
@@ -199,6 +208,16 @@ for key,value in person.items():
     print(key,value)
 
 persons = [{'name': 'John', 'sex': 'Male'}, {'name': 'Jane', 'sex': 'Female'}]
+
+
+for x in persons:
+    for key in x:
+        print(key,x)
+
+
+
+
+
 
 for x in persons:
     for key in x:

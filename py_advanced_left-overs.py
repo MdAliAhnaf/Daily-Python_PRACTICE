@@ -14,6 +14,11 @@ b = [5,4,3,2,1]
 print(zip(a,b))     #zip object at 0x........
 print(list(zip(a,b)))
 print(end = '\n')
+
+for n1,n2 in zip(a,b):
+   print(n1,n2)
+
+print(end = '\n')
 #If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.
 a = [1,2,3,4,5]
 b = [7,6,5,4,3,2,1]
@@ -91,8 +96,8 @@ print(end = '\n')
 
 nums = [ 1, 10, 20, 3, -2, 0]
 print(list(map(lambda a: a+a, nums)))
-print(list(filter(lambda a: a>3, nums)))
-print(list(map(lambda a: a>3, nums)))
+print(list(filter(lambda a: a>3, nums))) #filters based on the condition
+print(list(map(lambda a: a>3, nums))) #return Boolean based on the condition
 print(end = '\n')
 x = lambda a, b : a * b
 print(x(5, 6))

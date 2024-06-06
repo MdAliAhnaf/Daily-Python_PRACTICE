@@ -15,6 +15,24 @@ c = []
 d = [1, 2, 3][1:]
 
 print(1 in a)
+print(end = '\n')
+
+arr = [5,7,2,9,7,4,0,1,5,2]
+arr.sort()
+print(arr)
+arr.sort(reverse=True)
+print(arr)
+
+print(end = '\n')
+
+arr = ["bob", "alice", "jane", "doe"]
+arr.sort() #alphabetical
+print(arr)
+
+# Custom sort (by length of string) #3 by size, 4, 5
+arr.sort(key=lambda x: len(x))
+print(arr)
+
 
 # Put your predictions in the list below. Lengths should contain 4 numbers, the
 # first being the length of a, the second being the length of b and so on.
@@ -111,11 +129,18 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 
 print(end = '\n')
 
+arr_2d = [ [0,1,2] * 4 for x in range(2)]
+print(arr_2d)
+print(arr_2d[0][0], arr_2d[3][3])
+
+print(end="\n")
+
 listOfLists = [
     ['a','b','c'],
     ['One','Two']
 ]
 print(listOfLists)
+print(listOfLists[1][1]) #2nd array 2nd element
 
 print(end = '\n')
 # party_attendees = ['Adela', 'Fleda', 'Owen', 'May', 'Mona', 'Gilbert', 'Ford'] . 
@@ -150,6 +175,14 @@ print(upper_newlist)
 print(new_list)
 print(end = '\n')
 
+arr = [i for i in range(5)]
+print(arr)
+arr = [i+1 for i in range(5)]
+print(arr)
+arr = [i+i for i in range(5)]
+print(arr)
+
+print(end = '\n')
 
 arr1 = [0,1,2,3,4,5,6,7,8,9]
 arr1_copy= arr1.copy()
