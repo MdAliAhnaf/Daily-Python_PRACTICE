@@ -320,7 +320,7 @@ print(numerator / denominator)
 
 depts = {"MBA","EEE","BBA","ARCHI"}
 print(depts, type(depts))
-
+print(type(depts))
 depts.add("CS")
 print(depts)
 print("CS" in depts)

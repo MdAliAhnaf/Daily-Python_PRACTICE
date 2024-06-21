@@ -1,3 +1,4 @@
-list_of_string = ["ab", "cd", "ef"]
-print("".join(list_of_string))
-print(" ".join(list_of_string))
+astring = "Hello world!"
+print(astring.index("o")) #returns first occurrence index number & this method only recognizes the first one
+print(astring.count("l"))
+print(astring[3:7]) 
