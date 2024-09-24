@@ -331,6 +331,22 @@ year = int(input().strip())
 print(is_leap(year))
 print(end = '\n')
 
+
+def is_leap(year):
+     leap = False
+     if year%4==0:
+          leap = True
+          if year%100==0:
+               leap = False
+               if year%100==0 and year%400==0:
+                    leap = True
+     else:
+          return False
+     return leap
+        
+year = int(input())
+print(is_leap(year))
+
 #python function hacker-rank 123...n
 # By default Python‘s print() function ends with a newline
 # By default, the value of this parameter is ‘\n’ set end = '\n'

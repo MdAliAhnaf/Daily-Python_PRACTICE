@@ -1,3 +1,4 @@
+
 a_number = 9
 
 if a_number % 2 == 0:
@@ -20,6 +21,17 @@ for i in range(6, -4, -2):
     
 
 print(end = '\n')
+
+def print_n(n):
+  
+    if 1<=n<=150:
+        for x in range(1,n+1):
+            print(x,end = '')
+    return
+
+n = int(input())
+
+
 
 
 result = 1

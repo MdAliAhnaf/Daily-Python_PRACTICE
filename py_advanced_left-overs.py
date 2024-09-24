@@ -95,6 +95,9 @@ print(end = '\n')
 # write less code (be "Pythonic")
 
 nums = [ 1, 10, 20, 3, -2, 0]
+# nums.sort(lambda x: len(x))
+print(nums)
+
 print(list(map(lambda a: a+a, nums)))
 print(list(filter(lambda a: a>3, nums))) #filters based on the condition
 print(list(map(lambda a: a>3, nums))) #return Boolean based on the condition
